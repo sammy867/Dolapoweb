@@ -1,0 +1,47 @@
+/* General styles for the footer */
+.bomb {
+  text-align: center;
+  padding: 20px;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  color: #ffffff; /* Text color */
+  font-family: "Orbitron", sans-serif; /* Futuristic font */
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  z-index: 1000;
+}
+
+/* Glowing text animation */
+.bomb p {
+  color: #0ef; /* Cyan glow color */
+  text-shadow: 0 0 5px #0ef, 0 0 10px #0ef, 0 0 20px #0ef, 0 0 40px #0ef,
+    0 0 80px #0ef, 0 0 160px #0ef;
+  animation: glow 2s ease-in-out infinite alternate,
+    pulse 4s ease-in-out infinite;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #0ef, 0 0 10px #0ef, 0 0 20px #0ef, 0 0 40px #0ef,
+      0 0 80px #0ef, 0 0 160px #0ef;
+    opacity: 1;
+  }
+  100% {
+    text-shadow: 0 0 10px #0ef, 0 0 20px #0ef, 0 0 40px #0ef, 0 0 80px #0ef,
+      0 0 160px #0ef, 0 0 320px #0ef;
+    opacity: 0.8;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}

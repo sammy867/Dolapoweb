@@ -1,0 +1,126 @@
+/* General styles */
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+}
+
+/* Menu bar (hamburger icon) */
+.menu-bars {
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.menu-bars:hover {
+  color: var(--skyblue);
+}
+
+.boots {
+  color: whitesmoke;
+  transform: scale(2);
+}
+
+.boots:hover {
+  cursor: pointer;
+  color: var(--skyblue);
+  transition: 0.9s;
+}
+
+/* Sidebar navigation */
+.nav-menu {
+  background-color: black;
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: all 0.4s ease;
+  z-index: 999;
+}
+
+.nav-menu.active {
+  left: 0;
+}
+
+/* Sidebar items */
+.nav-menu-items {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.nav-menu-items ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-menu-items li {
+  padding: 16px 0 16px 32px;
+  list-style: none;
+}
+
+.nav-menu-items li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.nav-menu-items li a:hover {
+  color: var(--skyblue);
+}
+
+/* Icons in sidebar */
+.nav-menu-items li a span {
+  margin-left: 16px;
+}
+
+/* Navbar toggle */
+.navbar-toggle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 32px;
+  background-color: black;
+}
+
+/* Custom scrollbar */
+.nav-menu::-webkit-scrollbar {
+  width: 5px;
+}
+
+.nav-menu::-webkit-scrollbar-thumb {
+  background-color: #ffd700;
+  border-radius: 10px;
+}
+
+.nav-menu::-webkit-scrollbar-track {
+  background: #444;
+}
+
+/* Media query for responsive design */
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    width: 200px;
+  }
+
+  .nav-menu-items li a {
+    font-size: 1rem;
+  }
+
+  .menu-bars {
+    font-size: 1.5rem;
+  }
+}

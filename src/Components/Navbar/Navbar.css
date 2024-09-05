@@ -1,0 +1,114 @@
+.n-wrapper {
+  min-height: 1vh;
+  padding: 0.5rem, 6rem;
+  width: 98%;
+  margin-left: 45px;
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px;
+  border-radius: 40px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  align-items: center;
+  top: 0;
+  background: linear-gradient(
+    360deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.n-wrapper::before {
+  content: "";
+  position: absolute;
+  display: flex;
+  left: 0.1%;
+  width: 18%;
+  border: 2px;
+  border-radius: 40px;
+  min-height: 10vh;
+  background: linear-gradient(
+    360deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: 0.5s;
+}
+.n-wrapper:hover::before {
+  left: 95%;
+  width: 3%;
+}
+.n-left {
+  flex: 1;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+  display: flex;
+  gap: 2rem;
+}
+.n-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: var(--skyblue);
+  animation: flicker-animation 2s infinite;
+}
+
+@keyframes flicker-animation {
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    opacity: 1;
+  }
+  20%,
+  24%,
+  55% {
+    opacity: 0;
+  }
+}
+.n-right {
+  display: flex;
+  flex: 1;
+  font-size: 1.3rem;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+}
+.n-list {
+  flex: 10;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.n-list > ul {
+  display: flex;
+  color: white;
+  gap: 2rem;
+  margin-right: 4rem;
+}
+.n-list > ul :hover {
+  cursor: pointer;
+  color: var(--skyblue);
+  transition: 0.3s;
+}
+
+.n-pic {
+  display: flex;
+  height: 55px;
+  width: 55px;
+  border-radius: 50px;
+  border-style: dashed;
+  border-color: var(--skyblue);
+}

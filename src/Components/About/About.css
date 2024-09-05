@@ -1,0 +1,83 @@
+.a-content {
+  display: flex;
+  height: 100vh;
+  margin-top: -3rem;
+  padding-top: 100px;
+  opacity: 1;
+  position: inherit;
+  z-index: 0;
+}
+
+.ab {
+  color: #0ef;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transition: text-shadow 0.4s ease;
+  font-size: 45px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.ab :hover {
+  text-shadow: 0 0 15px #3498db, 0 0 20px #8e44ad, 0 0 25px #e74c3c;
+}
+
+.ayes::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #00f6ff;
+  transition: width 0.4s ease;
+}
+
+.ayes:hover::after {
+  width: 100%;
+}
+
+.ayes:hover {
+  color: #ff00e6;
+}
+
+/* Futuristic text glow on hover */
+.ayes:hover {
+  text-shadow: 0 0 5px #00f6ff, 0 0 10px #00f6ff, 0 0 20px #ff00e6,
+    0 0 30px #ff00e6;
+}
+
+.a-left p {
+  color: grey;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 16px;
+}
+
+.bva {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+
+.a-right {
+  display: flex;
+  margin-left: 1rem;
+}
+
+.a-right img {
+  width: 600px;
+  height: 650px;
+  border: 5px solid #0ef;
+  border-top-right-radius: 35px;
+  border-bottom-left-radius: 35px;
+  border-right-style: dashed;
+  border-top-style: dotted;
+  border-bottom-style: dotted;
+  border-left-style: dashed;
+}
