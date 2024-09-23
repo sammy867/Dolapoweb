@@ -27,7 +27,7 @@ function App() {
     // Simulate loading duration (or replace this with actual content load logic)
     const loadContent = setTimeout(() => {
       setLoading(false); // Hide loader after content is loaded
-    }, 1000); // You can adjust this time based on real-world scenarios
+    }, 2000); // You can adjust this time based on real-world scenarios
 
     return () => clearTimeout(loadContent); // Cleanup timeout
   }, [location]); // Dependency on the route location

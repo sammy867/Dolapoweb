@@ -12,7 +12,7 @@ import { SiGmail } from "react-icons/si";
 import { themeContext } from "../../Context";
 import { useContext } from "react";
 import { motion } from "framer-motion";
-import Cloud from "../../assets/video/vcloud.mp4";
+import Cloud from "../../assets/video/cybernets.mp4";
 import DP from "../../assets/bg3.png";
 import { ReactTyped } from "react-typed";
 
@@ -28,9 +28,10 @@ const Intro = () => {
         autoPlay
         loop
         muted
+        preload="true"
         id="video-background"
       >
-        <source src={Cloud} type="video/mp4"></source>
+        <source src={Cloud} type="video/mp4" loading="lazy"></source>
       </video>
 
       <div className="i-left">
@@ -48,7 +49,6 @@ const Intro = () => {
               "Defending Against Cyber Threats",
               "Fortifying Network Security",
               "Mitigating Security Risks",
-              "Preventing Data Breaches",
             ]}
             typeSpeed={40}
             backSpeed={50}
@@ -92,9 +92,13 @@ const Intro = () => {
         </div>
       </div>
       <div className="i-right">
-        <img className="i-img" src={DP} alt="persona" />
+        <img className="i-img" src={DP} alt="persona" loading="lazy" />
         <div className="info-overlay">
-          <h2>Want to know more about me?</h2>
+          <h1>Hi, I am Dolapo Oyegunle</h1>
+          <h3>
+            A Network Security Engineer specializing in advanced firewall
+            management and cybersecurity solutions.
+          </h3>
           <button className="btn-2">
             <div className="svg-wrapper-1">
               <div className="svg-wrapper">

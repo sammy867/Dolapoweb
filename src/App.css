@@ -12,10 +12,11 @@
   --lavender: #e6e6fa;
   --navy: #000080;
   --skyblue: #87ceeb;
+  --cyberblue: #0ef;
   --midnightblue: #191970;
   --matte: #28282b;
   --charcoal: #36454f;
-  --boxShadow: 0px 19px 60px rgb(0 0 0 / 8%);
+  --boxShadow: 0px 19px 28px #11e0eb;
   --orangeCard: rgba(252, 166, 31, 0.45);
   --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
 }

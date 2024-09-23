@@ -1,0 +1,109 @@
+.card {
+  width: 350px;
+  height: 450px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  background: rgba(255, 255, 255, 0.26);
+  border: 7px solid #0ef;
+  box-shadow: var(--boxShadow);
+  border-radius: 20px;
+  padding: 0px 26px 2px 26px;
+  font-weight: bold;
+}
+
+.card span:nth-of-type(1) {
+  color: #0ef;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.card span:nth-of-type(2) {
+  font-size: 14px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  /* background: linear-gradient(45deg, #e6e6e6, #b8b8b8, #a1a1a1, #fff); */
+  color: rgba(255, 255, 255, 0.5);
+  text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+}
+
+.card > img {
+  width: 200px;
+  height: 120px;
+}
+
+.btn3 {
+  position: absolute;
+  left: 8rem;
+  overflow: hidden;
+  border: 1px solid #0ef;
+  color: #18181a;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 15px;
+  padding: 19px 18px 19px;
+  text-decoration: none;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 30px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn3 span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+
+.btn3 span:last-child {
+  color: white;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+}
+
+.btn3:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0ef;
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+}
+
+.btn3:hover:after {
+  transform-origin: bottom center;
+  transform: skewY(9.3deg) scaleY(2);
+}
+
+.btn3:hover span:last-child {
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 1;
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    width: auto;
+  }
+}

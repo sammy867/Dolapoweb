@@ -1,6 +1,6 @@
 .a-content {
   display: flex;
-  height: 100vh;
+  min-height: 290vh;
   margin-top: -3rem;
   padding-top: 100px;
   opacity: 1;
@@ -10,15 +10,11 @@
 
 .ab {
   color: #0ef;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 15px #3498db, 0 0 20px #8e44ad, 0 0 25px #e74c3c;
   transition: text-shadow 0.4s ease;
   font-size: 45px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-}
-
-.ab :hover {
-  text-shadow: 0 0 15px #3498db, 0 0 20px #8e44ad, 0 0 25px #e74c3c;
 }
 
 .ayes::after {
@@ -30,10 +26,6 @@
   height: 2px;
   background: #00f6ff;
   transition: width 0.4s ease;
-}
-
-.ayes:hover::after {
-  width: 100%;
 }
 
 .ayes:hover {
@@ -80,4 +72,26 @@
   border-top-style: dotted;
   border-bottom-style: dotted;
   border-left-style: dashed;
+}
+
+.here {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  margin-top: 46rem;
+}
+
+.here p {
+  font-size: 50px;
+  color: #0ef;
+  letter-spacing: 4px;
+  text-shadow: 3px 3px 0 white, 6px 6px 0 #02f, 9px 9px 0 #00f;
+}
+
+.cards {
+  display: flex;
+  margin-top: 9rem;
+  position: absolute;
+  margin-right: 69rem;
 }

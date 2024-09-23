@@ -1,0 +1,94 @@
+.port {
+  display: flex;
+  min-height: 120vh;
+  margin-top: -3rem;
+  padding-top: 100px;
+  opacity: 1;
+  position: inherit;
+  z-index: 0;
+}
+
+.special {
+  position: relative;
+}
+
+.content-box {
+  border: none;
+  padding: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: ease 0.3s;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  width: 1250px !important;
+}
+
+.titleText {
+  flex-grow: 1;
+  color: #0ef;
+  font-size: 35px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.arrow {
+  font-size: 24px; /* Adjust the size of the arrow icon */
+  margin-left: 10px; /* Add some spacing between the title and the icon */
+  transition: transform 0.3s ease;
+  color: #0ef; /* Smooth transition for the arrow */
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-height: 200px;
+  padding-top: 10px;
+  transition: transform 0.5s ease-out;
+}
+
+.portleft {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.portleft p {
+  color: gray;
+  width: 800px;
+  font-size: 22px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.portright img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 5px dashed #0ef;
+}
+
+/* Smooth unveil */
+.content-box.open .content {
+  max-height: 900px;
+  opacity: 1;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.content-box.open .arrow {
+  transform: rotate(180deg);
+}
+
+/* Hide content initially */
+.content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}

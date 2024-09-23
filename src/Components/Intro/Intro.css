@@ -35,17 +35,13 @@
 }
 
 .typed-text {
-  color: var(--skyblue);
   font-weight: bold;
   font-size: 1rem;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   transition: 0.3s;
-}
-.typed-text:hover {
   color: rgb(11, 110, 176);
   text-shadow: -2px -2px 0px #f0c, 2px 2px 0px #3333ff;
-  cursor: pointer;
 }
 
 .i-name > :nth-child(3) {
@@ -56,8 +52,6 @@
   margin-top: 10px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  animation: appear 1s linear 2s;
-  animation-fill-mode: both;
 }
 
 /* Base link style */
@@ -212,7 +206,7 @@
   background-size: 25% 100%;
   animation: an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop
     0.75s linear infinite;
-  animation-play-state: paused;
+  animation-play-state: running;
   translate: -5% 0%;
   transition: translate 0.25s ease-out, opacity 0.175s ease-out;
 }
@@ -222,12 +216,6 @@
   animation-play-state: running;
   transition-duration: 0.75s;
   translate: 0% 0%;
-}
-
-@keyframes an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop {
-  to {
-    transform: translateX(-25%);
-  }
 }
 
 .btn-1 span {
@@ -258,7 +246,6 @@
   object-fit: cover;
 }
 
-/* Styling for the overlay */
 .info-overlay {
   position: absolute;
   top: 0;
@@ -266,40 +253,46 @@
   height: 500px;
   width: 500px;
   border-radius: 50px;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  opacity: 0; /* Initially hidden */
-  transition: opacity 0.3s ease; /* Smooth transition for appearance */
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-/* Show overlay on hover */
 .i-right:hover .info-overlay {
   opacity: 6;
+  cursor: pointer;
 }
 
-/* Additional styling for the overlay content */
-.info-overlay h2 {
-  /* padding: 2px; */
-  margin-top: 25rem;
-  margin-left: -8rem;
-  font-size: 21px;
+.info-overlay h1 {
+  margin-top: 15rem;
+  margin-left: -1rem;
+  font-size: 30px;
   font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   text-transform: uppercase;
   color: transparent;
-  background: linear-gradient(to right, #f58529, #dd2a7b, #8134af, #515bd4);
+  background: linear-gradient(to right, #0ef, #dd2a7b, #8134af, #0ef);
   background-clip: text;
   -webkit-background-clip: text;
   cursor: pointer;
   transition: color 0.4s ease, background-position 0.4s ease;
 }
 
-.info-overlay h2:hover {
-  color: #fff;
-  background-position: 100% 0;
+.info-overlay h3 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  color: #0ef;
+  text-shadow: 0 0 5px #0ef, 0 0 10px #0ef;
+  margin-left: 1rem;
+  width: 500px;
+  align-items: center;
+  margin-top: -1rem;
 }
 
 .btn-2 {
@@ -310,8 +303,8 @@
   background: #000;
   color: white;
   padding: 15px 24px 15px 24px;
-  width: 240px;
-  height: 80px;
+  width: 280px;
+  height: 90px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -320,9 +313,9 @@
   overflow: hidden;
   transition: all 0.2s;
   cursor: pointer;
-  top: 27rem;
-  left: -2.5rem;
-  margin-top: 0.4rem;
+  top: 25rem;
+  left: 5rem;
+  margin-top: -0.5rem;
 }
 
 .btn-2 span {
@@ -347,21 +340,11 @@
 }
 
 .btn-2:hover span {
-  transform: translateX(9em);
+  transform: translateX(5em);
 }
 
 .btn-2:active {
   transform: scale(0.95);
-}
-
-@keyframes fly-1 {
-  from {
-    transform: translateY(0.1em);
-  }
-
-  to {
-    transform: translateY(-0.1em);
-  }
 }
 
 .i-name span:nth-child(1) {
@@ -380,49 +363,33 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
   overflow: hidden;
   pointer-events: none; /* Ensures the pseudo-elements don't interfere with cursor interactions */
 }
 
-/* Glitch effect with the bottom half clipped on hover */
 .i-name span:nth-child(1)::before {
   color: rgba(17, 31, 155, 0.699);
-  clip-path: inset(50% 0 0 0); /* Clips the top half */
-  animation: glitch-animation 2s infinite;
+  clip-path: inset(50% 0 0 0);
+  animation: glitch-animation 1s infinite;
 }
-
-/* Glitch effect with the top half clipped on hover */
 .i-name span:nth-child(1)::after {
   color: var(--skyblue);
-  clip-path: inset(0 0 50% 0); /* Clips the bottom half */
-  animation: glitch-animation2 2s infinite;
+  clip-path: inset(0 0 50% 0);
+  animation: glitch-animation2 1s infinite;
 }
 
-/* Keyframes for the first glitch animation */
 @keyframes glitch-animation {
-  0% {
-    transform: translate(0);
-  }
-  20% {
-    transform: translate(-2px, 2px);
-  }
-  40% {
-    transform: translate(-2px, -2px);
-  }
-  60% {
-    transform: translate(2px, 2px);
-  }
-  80% {
-    transform: translate(2px, -2px);
-  }
+  0%,
   100% {
     transform: translate(0);
   }
+  50% {
+    transform: translate(1px, 1px);
+  }
 }
 
-/* Keyframes for the second glitch animation */
 @keyframes glitch-animation2 {
   0% {
     transform: translate(0);
@@ -441,5 +408,20 @@
   }
   100% {
     transform: translate(0);
+  }
+}
+@keyframes an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop {
+  to {
+    transform: translateX(-25%);
+  }
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
   }
 }

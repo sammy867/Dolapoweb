@@ -4,7 +4,7 @@ import Toggle from "../Toggle/Toggle";
 import Dolapo from "../../assets/dp.jpeg";
 import { themeContext } from "../../Context";
 import { useContext } from "react";
-import Sidebar from "../Sidebar/Sidebar";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const theme = useContext(themeContext);
@@ -18,11 +18,21 @@ const Navbar = () => {
       <div className="n-right">
         <div className="n-list" style={{ color: darkMode ? "white" : "" }}>
           <ul style={{ listStyleType: "disc", color: darkMode ? "white" : "" }}>
-            <li>Home</li>
-            <li>About</li>
-            <li>Services</li>
-            <li>Skills</li>
-            <li>Portfolio</li>
+            <Link className="name" to="/">
+              <li>Home</li>
+            </Link>
+            <Link className="name" to="/about">
+              <li>About</li>
+            </Link>
+            <Link className="name" to="/services">
+              <li>Services</li>
+            </Link>
+            <Link className="name" to="/skills">
+              <li>Skills</li>
+            </Link>
+            <Link className="name" to="/portfolio">
+              <li>Portfolio</li>
+            </Link>
           </ul>
         </div>
         <a href="/" className="n-home">

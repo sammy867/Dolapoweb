@@ -104,6 +104,18 @@
   transition: 0.3s;
 }
 
+.name {
+  display: flex;
+  color: white;
+  gap: 2rem;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+.name :hover {
+  cursor: pointer;
+  color: var(--skyblue);
+  transition: 0.3s;
+}
 .n-pic {
   display: flex;
   height: 55px;
