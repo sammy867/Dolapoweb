@@ -1,17 +1,9 @@
 import React from "react";
 import "./Intro.css";
-import Dolapo from "../../assets/dp.jpeg";
-import {
-  FaGithub,
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
-  FaArrowRight,
-} from "react-icons/fa";
+import { FaGithub, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { themeContext } from "../../Context";
 import { useContext } from "react";
-import { motion } from "framer-motion";
 import Cloud from "../../assets/video/cybernets.mp4";
 import DP from "../../assets/bg3.png";
 import { ReactTyped } from "react-typed";
@@ -46,9 +38,9 @@ const Intro = () => {
             className="typed-text"
             strings={[
               "Dolapo Oyegunle",
-              "Defending Against Cyber Threats",
               "Fortifying Network Security",
               "Mitigating Security Risks",
+              "Maintaining Firewalls",
             ]}
             typeSpeed={40}
             backSpeed={50}

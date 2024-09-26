@@ -6,6 +6,8 @@
   opacity: 1;
   position: inherit;
   z-index: 0;
+  animation: appear 1s linear 2s;
+  animation-fill-mode: both;
 }
 
 .special {
@@ -74,7 +76,6 @@
   border: 5px dashed #0ef;
 }
 
-/* Smooth unveil */
 .content-box.open .content {
   max-height: 900px;
   opacity: 1;
@@ -85,10 +86,18 @@
   transform: rotate(180deg);
 }
 
-/* Hide content initially */
 .content {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
   transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

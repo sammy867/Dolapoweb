@@ -3,6 +3,8 @@ import "./Portfolio.css";
 import Cybernet from "../../assets/video/cybernets.mp4";
 import { FaArrowDown } from "react-icons/fa";
 import Salary from "../../assets/Salary1.jpeg";
+import { themeContext } from "../../Context.js";
+import { useContext } from "react";
 import Tax from "../../assets/SalaryApp.jpeg";
 import Study from "../../assets/StudyApp.jpeg";
 import Java from "../../assets/phone.jpg";
@@ -12,6 +14,8 @@ import { ReactTyped } from "react-typed";
 const PortfolioItem = ({ title, image, link, paragraph }) => {
   const [isOpen, setIsOpen] = useState(false);
   const contentRef = useRef(null);
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
 
   const toggleContent = () => {
     setIsOpen(!isOpen);

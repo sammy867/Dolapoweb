@@ -32,7 +32,7 @@ const About = () => {
         <ReactTyped
           className="ab"
           strings={[
-            "Here is a sneak peek into my journey so far",
+            "Here is a sneak peek into my journey so far!",
             "Come with me!",
             "Hi, I am Dolapo Oyegunle",
           ]}

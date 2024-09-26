@@ -6,6 +6,8 @@
   opacity: 1;
   position: inherit;
   z-index: 0;
+  animation: appear 1s linear 2s;
+  animation-fill-mode: both;
 }
 
 .bv {
@@ -380,6 +382,15 @@
   animation: glitch-animation2 1s infinite;
 }
 
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes glitch-animation {
   0%,
   100% {
@@ -423,5 +434,60 @@
 
   to {
     transform: translateY(-0.1em);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .intro {
+    flex-direction: column;
+    height: 120vh;
+  }
+
+  .bv {
+    width: 100%;
+    object-fit: cover;
+  }
+  .typed-text {
+    min-width: 50%;
+    font-size: 11px;
+  }
+
+  .i-left {
+    max-width: 200%;
+    min-height: 55vh;
+    flex-wrap: wrap;
+  }
+  .i-name {
+    max-width: 100% !important;
+    min-height: 40vh !important;
+    display: flex;
+    align-content: center;
+  }
+
+  .btn-1 {
+    display: flex;
+    margin-top: 13vh !important;
+  }
+
+  .i-icons {
+    margin-top: 150%;
+    transform: scale(0.9);
+    left: 0.1rem;
+  }
+  .i-right {
+    height: 600px;
+    left: 0.1rem;
+    margin-top: 50%;
+    position: relative;
+  }
+  .i-img {
+    display: flex;
+    max-height: 320px !important;
+    max-width: 330px !important;
+    border-radius: 50px;
+    border-style: dashed;
+    border-color: var(--skyblue);
+    position: relative;
+    object-fit: cover;
   }
 }
