@@ -1,0 +1,29 @@
+.skills {
+  display: flex;
+  min-height: 180vh;
+  margin-top: -3rem;
+  padding-top: 100px;
+  opacity: 1;
+  position: inherit;
+  z-index: 0;
+  animation: appear 1s linear 2s;
+  animation-fill-mode: both;
+}
+
+.skill-container {
+  display: flex;
+  position: absolute;
+}
+
+.remain {
+  margin-top: 7rem;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

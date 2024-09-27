@@ -1,0 +1,33 @@
+/* General styles for the footer */
+.bomb {
+  text-align: center;
+  padding: 20px;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  color: #ffffff; /* Text color */
+  font-family: "Orbitron", sans-serif; /* Futuristic font */
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  z-index: 0;
+}
+
+/* Glowing text animation */
+.bomb p {
+  color: #0ef; /* Cyan glow color */
+  text-shadow: 0 0 5px #0ef, 0 0 10px #0ef, 0 0 20px #0ef, 0 0 40px #0ef,
+    0 0 80px #0ef, 0 0 160px #0ef;
+  animation: glow 2s ease-in-out infinite alternate,
+    pulse 4s ease-in-out infinite;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .bomb {
+    height: 1rem;
+    margin-top: 2.5rem;
+    left: -9rem;
+    margin-bottom: 1rem;
+  }
+}
