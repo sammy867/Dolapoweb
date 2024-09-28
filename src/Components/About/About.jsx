@@ -1,8 +1,6 @@
 import React from "react";
 import "./About.css";
 import Cybernet from "../../assets/video/cybernets.mp4";
-import { themeContext } from "../../Context";
-import { useContext } from "react";
 import Dolapo from "../../assets/dp.jpeg";
 import { ReactTyped } from "react-typed";
 import Card from "../Card/Card";
@@ -13,8 +11,6 @@ import Fortinet from "../../assets/fortinet.png";
 import Cisco from "../../assets/cisbg.png";
 import Avantor from "../../assets/avantor.png";
 const About = () => {
-  const theme = useContext(themeContext);
-  const darkMode = theme.state.darkMode;
   return (
     <div className="a-content">
       <video

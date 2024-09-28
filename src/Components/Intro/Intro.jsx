@@ -9,7 +9,6 @@ import DP from "../../assets/bg3.png";
 import { ReactTyped } from "react-typed";
 
 const Intro = () => {
-  const transition = { duration: 1, type: "spring" };
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
   return (
