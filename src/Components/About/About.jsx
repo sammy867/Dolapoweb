@@ -10,20 +10,26 @@ import Palo from "../../assets/Palobg.png";
 import Fortinet from "../../assets/fortinet.png";
 import Cisco from "../../assets/cisbg.png";
 import Avantor from "../../assets/avantor.png";
+import { themeContext } from "../../Context";
+import { useContext } from "react";
 const About = () => {
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
   return (
     <div className="a-content">
-      <video
-        className="bva"
-        playsInline
-        autoPlay
-        loop
-        muted
-        id="video-background"
-        preload="true"
-      >
-        <source src={Cybernet} type="video/mp4"></source>
-      </video>
+      {!darkMode && (
+        <video
+          className="bva"
+          playsInline
+          autoPlay
+          loop
+          muted
+          preload="true"
+          id="video-background"
+        >
+          <source src={Cybernet} type="video/mp4" loading="lazy"></source>
+        </video>
+      )}
       <div className="a-left">
         <ReactTyped
           className="ab"

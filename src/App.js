@@ -14,7 +14,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 
 function App() {
   const theme = useContext(themeContext);
-  const darkMode = theme.state.darkMode;
+  const darkMode = theme?.state?.darkMode;
   const [loading, setLoading] = useState(false); // Loader state
 
   const location = useLocation(); // Get the current route
@@ -64,7 +64,7 @@ function App() {
 
 export default function AppWrapper() {
   return (
-    <Router>
+  <Router>
       <App />
     </Router>
   );

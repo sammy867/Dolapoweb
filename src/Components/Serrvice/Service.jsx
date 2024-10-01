@@ -11,21 +11,27 @@ import S4 from "../../assets/cy4.jpeg";
 import S5 from "../../assets/cy5.jpeg";
 import S6 from "../../assets/cy6.jpg";
 import S7 from "../../assets/cy7.png";
+import { themeContext } from "../../Context";
+import { useContext } from "react";
 
 const Service = () => {
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
   return (
     <div className="creative">
-      <video
-        className="bva"
-        playsInline
-        autoPlay
-        loop
-        muted
-        id="video-background"
-        preload="true"
-      >
-        <source src={Cybernet} type="video/mp4"></source>
-      </video>
+      {!darkMode && (
+        <video
+          className="bva"
+          playsInline
+          autoPlay
+          loop
+          muted
+          preload="true"
+          id="video-background"
+        >
+          <source src={Cybernet} type="video/mp4" loading="lazy"></source>
+        </video>
+      )}
       <div className="expend">
         <ReactTyped
           className="adis"

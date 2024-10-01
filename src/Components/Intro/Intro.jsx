@@ -13,18 +13,19 @@ const Intro = () => {
   const darkMode = theme.state.darkMode;
   return (
     <div className="intro">
-      <video
-        className="bv"
-        playsInline
-        autoPlay
-        loop
-        muted
-        preload="true"
-        id="video-background"
-      >
-        <source src={Cloud} type="video/mp4" loading="lazy"></source>
-      </video>
-
+      {!darkMode && (
+        <video
+          className="bv"
+          playsInline
+          autoPlay
+          loop
+          muted
+          preload="true"
+          id="video-background"
+        >
+          <source src={Cloud} type="video/mp4" loading="lazy"></source>
+        </video>
+      )}
       <div className="i-left">
         <div className="i-name">
           <span

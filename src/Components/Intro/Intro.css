@@ -19,6 +19,7 @@
   z-index: -1;
   object-fit: cover;
   filter: brightness(50%);
+  background: none;
 }
 
 .i-left {

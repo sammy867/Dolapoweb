@@ -8,6 +8,8 @@ import Study from "../../assets/StudyApp.jpeg";
 import Java from "../../assets/phone.jpg";
 import Website from "../../assets/web.png";
 import { ReactTyped } from "react-typed";
+import { themeContext } from "../../Context";
+import { useContext } from "react";
 
 const PortfolioItem = ({ title, image, link, paragraph }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,6 +63,8 @@ const PortfolioItem = ({ title, image, link, paragraph }) => {
 };
 
 const Portfolio = () => {
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
   // Data for the portfolio items
   const portfolioItems = [
     {
@@ -102,17 +106,19 @@ const Portfolio = () => {
 
   return (
     <div className="port">
-      <video
-        className="bva"
-        playsInline
-        autoPlay
-        loop
-        muted
-        id="video-background"
-        preload="true"
-      >
-        <source src={Cybernet} type="video/mp4"></source>
-      </video>
+      {!darkMode && (
+        <video
+          className="bva"
+          playsInline
+          autoPlay
+          loop
+          muted
+          preload="true"
+          id="video-background"
+        >
+          <source src={Cybernet} type="video/mp4" loading="lazy"></source>
+        </video>
+      )}
       <div className="persona">
         <ReactTyped
           className="adis"

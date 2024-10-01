@@ -9,11 +9,28 @@ import Business from "../../assets/business.jpg";
 import Card from "../Card/Card";
 import { ReactTyped } from "react-typed";
 import { motion } from "framer-motion";
+import { themeContext } from "../../Context";
+import { useContext } from "react";
 import "./Skills.css";
 
 const Skills = () => {
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
   return (
     <div className="skills">
+      {!darkMode && (
+        <video
+          className="bva"
+          playsInline
+          autoPlay
+          loop
+          muted
+          preload="true"
+          id="video-background"
+        >
+          <source src={Cybernet} type="video/mp4" loading="lazy"></source>
+        </video>
+      )}
       <div className="skill-container">
         <ReactTyped
           className="adis"
@@ -29,17 +46,6 @@ const Skills = () => {
           loop
         />
       </div>
-      <video
-        className="bva"
-        playsInline
-        autoPlay
-        loop
-        muted
-        id="video-background"
-        preload="true"
-      >
-        <source src={Cybernet} type="video/mp4"></source>
-      </video>
       <div className="remain">
         <motion.div
           initial={{ left: "25%", opacity: "0" }}
