@@ -9,7 +9,7 @@ const Card = ({ pictures, heading, details }) => {
       <span>{details}</span>
       <a href="https://www.linkedin.com/in/dolapo-o-b56909263/">
         <button className="btn3">
-          <span className="txt">Reach out🙏</span>
+          <span className="txt">Reach out</span>
           <span>Thanks!❤</span>
         </button>
       </a>

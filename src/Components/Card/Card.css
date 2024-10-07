@@ -109,7 +109,6 @@
     transform: scale(1);
     flex-direction: column;
     gap: 1.1rem;
-    /* display: flex; */
   }
   .cards span:nth-of-type(1) {
     margin-top: -14%;
