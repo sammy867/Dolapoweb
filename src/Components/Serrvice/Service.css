@@ -1,0 +1,36 @@
+.creative {
+  display: flex;
+  min-height: 250vh;
+  margin-top: -3rem;
+  padding-top: 100px;
+  opacity: 1;
+  position: inherit;
+  z-index: 0;
+  animation: appear 1s linear 2s;
+  animation-fill-mode: both;
+}
+
+.cardio {
+  display: flex;
+  margin-top: 4rem;
+  position: absolute;
+  margin-right: 56rem;
+}
+
+.adis {
+  color: #0ef;
+  text-shadow: 0 0 15px #3498db, 0 0 20px #8e44ad, 0 0 25px #e74c3c;
+  transition: text-shadow 0.4s ease;
+  font-size: 45px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

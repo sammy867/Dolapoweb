@@ -1,0 +1,494 @@
+.intro {
+  display: flex;
+  height: 85vh;
+  margin-top: -3rem;
+  padding-top: 100px;
+  opacity: 1;
+  position: inherit;
+  z-index: 0;
+  animation: appear 1s linear 2s;
+  animation-fill-mode: both;
+}
+
+.bv {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  filter: brightness(50%);
+  background: none;
+}
+
+.i-left {
+  display: flex;
+  position: relative;
+  flex: 1;
+  flex-direction: column;
+  gap: 2rem;
+  /* z-index: -0.5; */
+}
+
+.i-name {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.typed-text {
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  transition: 0.3s;
+  color: rgb(11, 110, 176);
+  text-shadow: -2px -2px 0px #f0c, 2px 2px 0px #3333ff;
+}
+
+.i-name > :nth-child(3) {
+  flex: 1;
+  font-weight: bold;
+  font-size: 17px;
+  color: var(--gray);
+  margin-top: 10px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+/* Base link style */
+.no {
+  position: relative;
+  display: inline-block;
+  font-size: 1rem;
+  color: var(--skyblue);
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: bold;
+  transition: color 0.4s ease;
+}
+
+/* Glowing effect on hover */
+.no::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: rgba(0, 246, 255, 0.4);
+  filter: blur(20px);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 10px;
+}
+
+.no:hover::before {
+  opacity: 1;
+}
+
+/* Sliding underline effect */
+.no::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #00f6ff;
+  transition: width 0.4s ease;
+}
+
+.no:hover::after {
+  width: 100%;
+}
+
+/* Color change on hover */
+.no:hover {
+  color: #ff00e6;
+}
+
+/* Futuristic text glow on hover */
+.no:hover {
+  text-shadow: 0 0 5px #00f6ff, 0 0 10px #00f6ff, 0 0 20px #ff00e6,
+    0 0 30px #ff00e6;
+}
+
+.i-button {
+  width: 8rem;
+  height: 3rem;
+  animation: men-in-black 1.5s linear 2.1s;
+}
+
+.i-icons > * {
+  transform: scale(4);
+  justify-content: space-between;
+  margin-right: 3.5rem;
+  display: flex;
+  margin-top: -2rem;
+}
+
+.i-icons :nth-child(1) :hover {
+  cursor: pointer;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.i-icons :nth-child(2) :hover {
+  cursor: pointer;
+  color: #1877f2;
+  transition: 0.3s;
+}
+
+.i-icons :nth-child(3):hover {
+  cursor: pointer;
+  color: #8134af;
+  transition: 0.3s;
+}
+
+.i-icons :nth-child(4) :hover {
+  cursor: pointer;
+  color: #d14836;
+  transition: 0.3s;
+}
+
+.i-icons :nth-child(5):hover {
+  cursor: pointer;
+  color: #0077b5;
+  transition: 0.3s;
+}
+
+.i-icons > *:hover {
+  cursor: pointer;
+}
+
+.i-icons {
+  margin-top: 29rem;
+  display: flex;
+  position: absolute;
+  left: 15px;
+  width: 100%;
+}
+
+.btn-1 {
+  scale: 0.5;
+  display: block;
+  cursor: pointer;
+  color: white;
+  margin: 0 auto;
+  width: 320px;
+  white-space: nowrap;
+  position: absolute;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 30px;
+  overflow: hidden;
+  padding: 3px;
+  isolation: isolate;
+  top: 20rem;
+  left: -5.5rem;
+}
+
+.btn-1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400%;
+  height: 100%;
+  opacity: 0;
+  background: linear-gradient(
+    115deg,
+    #4fcf70,
+    #fad648,
+    #a767e5,
+    #12bcfe,
+    #44ce7b
+  );
+  background-size: 25% 100%;
+  animation: an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop
+    0.75s linear infinite;
+  animation-play-state: running;
+  translate: -5% 0%;
+  transition: translate 0.25s ease-out, opacity 0.175s ease-out;
+}
+
+.btn-1:hover::before {
+  opacity: 1;
+  animation-play-state: running;
+  transition-duration: 0.75s;
+  translate: 0% 0%;
+}
+
+.btn-1 span {
+  position: relative;
+  display: block;
+  padding: 1.5rem 1.5rem;
+  font-size: 30px;
+  background: #000;
+  border-radius: 30px;
+  height: 40px;
+  text-align: center;
+}
+.i-right {
+  position: relative;
+  width: 700px;
+  height: 900px;
+  overflow: hidden;
+  left: 200px;
+}
+
+.i-img {
+  height: 500px;
+  width: 500px;
+  border-radius: 50px;
+  border-style: dashed;
+  border-color: var(--skyblue);
+  position: relative;
+  object-fit: cover;
+}
+
+.info-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 500px;
+  width: 500px;
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.i-right:hover .info-overlay {
+  opacity: 6;
+  cursor: pointer;
+}
+
+.info-overlay h1 {
+  margin-top: 15rem;
+  margin-left: -1rem;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-transform: uppercase;
+  color: transparent;
+  background: linear-gradient(to right, #0ef, #dd2a7b, #8134af, #0ef);
+  background-clip: text;
+  -webkit-background-clip: text;
+  cursor: pointer;
+  transition: color 0.4s ease, background-position 0.4s ease;
+}
+
+.info-overlay h3 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  color: #0ef;
+  text-shadow: 0 0 5px #0ef, 0 0 10px #0ef;
+  margin-left: 1rem;
+  width: 500px;
+  align-items: center;
+  margin-top: -1rem;
+}
+
+.btn-2 {
+  scale: 0.5;
+  position: absolute;
+  font-family: inherit;
+  font-size: 18px;
+  background: #000;
+  color: white;
+  padding: 15px 24px 15px 24px;
+  width: 280px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 30px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+  top: 25rem;
+  left: 5rem;
+  margin-top: -0.5rem;
+}
+
+.btn-2 span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+  font-size: 2rem;
+}
+
+.btn-2 svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn-2:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.btn-2:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.btn-2:hover span {
+  transform: translateX(5em);
+}
+
+.btn-2:active {
+  transform: scale(0.95);
+}
+
+.i-name span:nth-child(1) {
+  font-size: 2em;
+  position: relative;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.i-name span:nth-child(1)::before,
+.i-name span:nth-child(1)::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  pointer-events: none; /* Ensures the pseudo-elements don't interfere with cursor interactions */
+}
+
+.i-name span:nth-child(1)::before {
+  color: rgba(17, 31, 155, 0.699);
+  clip-path: inset(50% 0 0 0);
+  animation: glitch-animation 1s infinite;
+}
+.i-name span:nth-child(1)::after {
+  color: var(--skyblue);
+  clip-path: inset(0 0 50% 0);
+  animation: glitch-animation2 1s infinite;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes glitch-animation {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(1px, 1px);
+  }
+}
+
+@keyframes glitch-animation2 {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(2px, -2px);
+  }
+  40% {
+    transform: translate(2px, 2px);
+  }
+  60% {
+    transform: translate(-2px, -2px);
+  }
+  80% {
+    transform: translate(-2px, 2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes an-at-keyframe-css-at-rule-that-translates-via-the-transform-property-the-background-by-negative-25-percent-of-its-width-so-that-it-gives-a-nice-border-animation_-We-use-the-translate-property-to-have-a-nice-transition-so-it_s-not-a-jerk-of-a-start-or-stop {
+  to {
+    transform: translateX(-25%);
+  }
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .intro {
+    flex-direction: column;
+    height: 120vh;
+  }
+
+  .bv {
+    width: 100%;
+    object-fit: cover;
+  }
+  .typed-text {
+    min-width: 50%;
+    font-size: 11px;
+  }
+
+  .i-left {
+    max-width: 200%;
+    min-height: 55vh;
+    flex-wrap: wrap;
+  }
+  .i-name {
+    max-width: 100% !important;
+    min-height: 40vh !important;
+    display: flex;
+    align-content: center;
+  }
+
+  .btn-1 {
+    display: flex;
+    margin-top: 13vh !important;
+  }
+
+  .i-icons {
+    margin-top: 150%;
+    transform: scale(0.9);
+    left: 0.1rem;
+  }
+  .i-right {
+    height: 600px;
+    left: 0.1rem;
+    margin-top: 50%;
+    position: relative;
+  }
+  .i-img {
+    display: flex;
+    max-height: 320px !important;
+    max-width: 330px !important;
+    border-radius: 50px;
+    border-style: dashed;
+    border-color: var(--skyblue);
+    position: relative;
+    object-fit: cover;
+  }
+}
